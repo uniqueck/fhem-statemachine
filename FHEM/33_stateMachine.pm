@@ -204,7 +204,7 @@ stateMachine_doTransition($$%)
     if( my $t = getEmptyTransition($transitions->{$new_state}) ) {
       my $timeout = $t->{timeout};
       $hash->{helper}{timed} = { t => $t, specials => $specials };
-      InternalTimer( gettimeofday()+$timeout, "stateMachine_retrigger", $hash, 0 );
+      InternalTimer( gettimeofday()+$timeout, "stateMachine_timedTransition", $hash, 0 );
     }
 
   } elsif( defined($new_state) ) {
