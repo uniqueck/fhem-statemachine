@@ -1,2 +1,2 @@
 DEL ./FHEM/33_stateMachine.pm
-UPD 2017-02-02_23:21:44 12598 FHEM/33_stateMachine.pm
+UPD 2019-01-30_20:07:44 12604 FHEM/33_stateMachine.pm
