@@ -1,0 +1,349 @@
+digraph G {
+GartenTerrasseScheune [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>GartenTerrasseScheune</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht OFF<br/>
+set G_Scheune_Hauptlicht ON<br/>
+set G_Terrasse_Hauptlicht ON<br/>
+set G_Garten_Hauptlicht ON<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+GartenTerrasseScheune -> GartenTerrasse [label="$3:short-click"]
+
+An [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>An</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht ON<br/>
+set G_Scheune_Hauptlicht ON<br/>
+set G_Terrasse_Hauptlicht ON<br/>
+set G_Garten_Hauptlicht ON<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickOFF<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+An -> GartenTerrasseHof [label="$3:short-click"]
+
+ScheuneHof [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>ScheuneHof</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht ON<br/>
+set G_Scheune_Hauptlicht ON<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht OFF<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+ScheuneHof -> TerrasseScheuneHof [label="$3:short-click"]
+
+TerrasseScheuneHof [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>TerrasseScheuneHof</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht ON<br/>
+set G_Scheune_Hauptlicht ON<br/>
+set G_Terrasse_Hauptlicht ON<br/>
+set G_Garten_Hauptlicht OFF<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+TerrasseScheuneHof -> An [label="$3:short-click"]
+
+DoubleClickTimer [shape=Mdiamond];
+GartenScheune [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>GartenScheune</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht OFF<br/>
+set G_Scheune_Hauptlicht ON<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht ON<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+GartenScheune -> Scheune [label="$3:short-click"]
+
+GartenScheuneHof [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>GartenScheuneHof</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht ON<br/>
+set G_Scheune_Hauptlicht ON<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht ON<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickOFF<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+GartenScheuneHof -> ScheuneHof [label="$3:short-click"]
+
+DoubleClickOFF [shape=Mdiamond];
+GartenHof [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>GartenHof</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht ON<br/>
+set G_Scheune_Hauptlicht OFF<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht ON<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+GartenHof -> GartenScheuneHof [label="$3:short-click"]
+
+GartenTerrasseHof [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>GartenTerrasseHof</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht ON<br/>
+set G_Scheune_Hauptlicht OFF<br/>
+set G_Terrasse_Hauptlicht ON<br/>
+set G_Garten_Hauptlicht ON<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+GartenTerrasseHof -> TerrasseHof [label="$3:short-click"]
+
+LongClickAn [shape=Mdiamond];
+Hof [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>Hof</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht ON<br/>
+set G_Scheune_Hauptlicht OFF<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht OFF<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+Hof -> GartenHof [label="$3:short-click"]
+
+TerrasseScheune [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>TerrasseScheune</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht OFF<br/>
+set G_Scheune_Hauptlicht ON<br/>
+set G_Terrasse_Hauptlicht ON<br/>
+set G_Garten_Hauptlicht OFF<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+TerrasseScheune -> GartenTerrasseScheune [label="$3:short-click"]
+
+HofVerlassen [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>HofVerlassen</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht ON<br/>
+set G_Scheune_Hauptlicht ON<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht OFF<br/>
+sleep 0.5<br/>
+set G_Hof_Hauptlicht OFF<br/>
+set G_Scheune_Hauptlicht OFF<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht OFF<br/>
+sleep 0.5<br/>
+set G_Hof_Hauptlicht ON<br/>
+set G_Scheune_Hauptlicht ON<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht OFF<br/>
+</td></tr>
+<tr><td><font COLOR="blue">leave:</font><br/>
+set G_Hof_Hauptlicht OFF<br/>
+set G_Scheune_Hauptlicht OFF<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht OFF<br/>
+sleep 0.5<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickOFF<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+HofVerlassen -> OFF[label="timeout=10"]
+HofVerlassen -> previous [label="$3:short-click"]
+
+GartenTerrasse [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>GartenTerrasse</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht OFF<br/>
+set G_Scheune_Hauptlicht OFF<br/>
+set G_Terrasse_Hauptlicht ON<br/>
+set G_Garten_Hauptlicht ON<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+GartenTerrasse -> Terrasse [label="$3:short-click"]
+
+Generic [shape=Mdiamond];
+TerrasseHof [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>TerrasseHof</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht ON<br/>
+set G_Scheune_Hauptlicht OFF<br/>
+set G_Terrasse_Hauptlicht ON<br/>
+set G_Garten_Hauptlicht OFF<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+TerrasseHof -> Hof [label="$3:short-click"]
+
+Scheune [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>Scheune</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht OFF<br/>
+set G_Scheune_Hauptlicht ON<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht OFF<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+Scheune -> TerrasseScheune [label="$3:short-click"]
+
+OFF [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>OFF</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht OFF<br/>
+set G_Scheune_Hauptlicht OFF<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht OFF<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+OFF -> Garten [label="$3:short-click"]
+
+GartenVerlassen [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>GartenVerlassen</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht ON<br/>
+set G_Scheune_Hauptlicht ON<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht ON<br/>
+sleep 0.5<br/>
+set G_Hof_Hauptlicht OFF<br/>
+set G_Scheune_Hauptlicht OFF<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht OFF<br/>
+sleep 0.5<br/>
+set G_Hof_Hauptlicht ON<br/>
+set G_Scheune_Hauptlicht ON<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht ON<br/>
+</td></tr>
+<tr><td><font COLOR="blue">leave:</font><br/>
+set G_Hof_Hauptlicht OFF<br/>
+set G_Scheune_Hauptlicht OFF<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht OFF<br/>
+sleep 0.5<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickOFF<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+GartenVerlassen -> OFF[label="timeout=120"]
+GartenVerlassen -> previous [label="$3:short-click"]
+
+Garten [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>Garten</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht OFF<br/>
+set G_Scheune_Hauptlicht OFF<br/>
+set G_Terrasse_Hauptlicht OFF<br/>
+set G_Garten_Hauptlicht ON<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+Garten -> GartenScheune [label="$3:short-click"]
+
+Terrasse [shape=none,margin=0,label=<<table BORDER= "0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+<tr><td><b>Terrasse</b></td></tr>
+<tr><td><font COLOR="blue">enter:</font><br/>
+set G_Hof_Hauptlicht OFF<br/>
+set G_Scheune_Hauptlicht OFF<br/>
+set G_Terrasse_Hauptlicht ON<br/>
+set G_Garten_Hauptlicht OFF<br/>
+</td></tr>
+<tr><td><font COLOR="blue">groups:</font><br/>
+LongClickAn<br/>
+DoubleClickTimer<br/>
+Generic<br/>
+</td></tr>
+</table>>];
+
+Terrasse -> OFF [label="$3:short-click"]
+
+LongClickOFF [shape=Mdiamond];
+}
